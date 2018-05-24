@@ -7,8 +7,51 @@
   <title>중간 프로젝트 템플릿</title>
   <link rel="stylesheet" href="./index.scss">
 </head>
+
 <body>
-  <h1>중간 프로젝트 템플릿</h1>
+  
+  <template id="todos-list">
+    <h1>할일 목록</h1>
+    <button class="todos-list__login-btn">로그인</button>
+    <button class="todos-list__new-todos-btn">할일 추가</button>
+    <button class="todos-list__logout-btn">로그아웃</button>
+    <div classs="todos-list"></div>
+  </template>
+
+  <template id="todos-item">
+    <p class="todos-item__title"></p>
+  </template>
+
+  <template id="todos-content">
+    <div class="todos-content">
+      <button class="todos-content__back-btn">뒤로 가기</button>
+      <p class="todos-content__time"></p>
+      <p class="todos-content__body"></p>
+    </div>
+  </template>
+
+
+  <template id="login">
+    <div class="login">
+      <h1 class-"login__title">로그인</h1>
+      <form class="login__form">
+        <input name="username" type="text" class="login__username">
+        <input name="password" type="password" class="login__password">
+        <button type="submit">전송</button>
+      </form>
+    </div>
+  </template>
+
+  <template id="todos-form">
+    <form class="todos-form">
+      <h1 class="todos-form__header">새 할일 추가</h1>
+      <input name="title" type="text" class="todos-form__title">
+      <textarea name="body" class="todos-form__body"></textarea>
+      <button class="todos-form__submit-btn">전송</button>
+      <button class="todos-form__back-btn">뒤로 가기</button>
+    </form>
+  </template>
+
   <script src="./index.js"></script>
 </body>
 </html>
