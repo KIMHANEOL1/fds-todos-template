@@ -4,52 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>중간 프로젝트 템플릿</title>
+  <title>FDS TODO</title>
   <link rel="stylesheet" href="./index.scss">
 </head>
-
 <body>
-  
-  <template id="todos-list">
-    <h1>할일 목록</h1>
-    <button class="todos-list__login-btn">로그인</button>
-    <button class="todos-list__new-todos-btn">할일 추가</button>
-    <button class="todos-list__logout-btn">로그아웃</button>
-    <div classs="todos-list"></div>
-  </template>
-
-  <template id="todos-item">
-    <p class="todos-item__title"></p>
-  </template>
-
-  <template id="todos-content">
-    <div class="todos-content">
-      <button class="todos-content__back-btn">뒤로 가기</button>
-      <p class="todos-content__time"></p>
-      <p class="todos-content__body"></p>
-    </div>
-  </template>
-
+  <div class="root"></div>
 
   <template id="login">
     <div class="login">
-      <h1 class-"login__title">로그인</h1>
+      <h1 class="login__header">로그인</h1>
       <form class="login__form">
-        <input name="username" type="text" class="login__username">
-        <input name="password" type="password" class="login__password">
-        <button type="submit">전송</button>
+        <input name="username" type="text" class="login__username-input">
+        <input name="password" type="password" class="login__password-input">
+        <button class="login__submit-btn">전송</button>
       </form>
     </div>
   </template>
 
-  <template id="todos-form">
-    <form class="todos-form">
-      <h1 class="todos-form__header">새 할일 추가</h1>
-      <input name="title" type="text" class="todos-form__title">
-      <textarea name="body" class="todos-form__body"></textarea>
-      <button class="todos-form__submit-btn">전송</button>
-      <button class="todos-form__back-btn">뒤로 가기</button>
-    </form>
+  <template id="index">
+    <div class="index">
+      <h1 class="index__header">할 일 목록</h1>
+      <button class="index__logout-btn">로그아웃</button>
+      <div class="index__todo-list">
+        <!-- todo-item -->
+      </div>
+      <form class="index__form">
+        <input name="body" type="text">
+        <button class="index__submit-btn">전송</button>
+      </form>
+    </div>
+  </template>
+
+  <template id="todo-item">
+    <div class="todo-item">
+      <input type="checkbox" name="complete" class="todo-item__checkbox">
+      <span class="todo-item__body">
+        <!-- body -->
+      </span>
+      <button class="todo-item__remove-btn">삭제</button>
+    </div>
   </template>
 
   <script src="./index.js"></script>
